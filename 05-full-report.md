@@ -2,27 +2,27 @@
 
 ### 1.1 Problem statement and research motivation (≈100 words)
 
-COVID-19 created several infection waves in Malaysia, and vaccination programmes were introduced to lower the spread and severity of the disease. However, it is not always clear how daily new case numbers relate to infections in different vaccination groups. Understanding these relationships can help explain how vaccination progress influenced the behaviour of the pandemic. This study uses Malaysia’s daily COVID-19 data to explore whether changes in unvaccinated, partially vaccinated, fully vaccinated, and booster categories are associated with total daily new cases. The motivation is to identify meaningful statistical patterns that can support public health understanding.
+COVID-19 caused many waves of infection in Malaysia, and vaccines were introduced to reduce the number of cases and serious illness. Even though vaccination helped the country, it is still not very clear how daily new cases changed alongside the different vaccination groups. Understanding this relationship can help explain how the situation developed during the pandemic. In this project, I use daily COVID-19 data from Malaysia to see whether unvaccinated, partially vaccinated, fully vaccinated and booster groups are linked with the number of new cases each day. This may give a simple but helpful picture of how vaccination affected the spread.
 
 ### 1.2 The data set (≈75 words)
 
-The dataset contains daily observations from January 2020 to August 2023. Although the original file includes 31 columns, only seven were selected for this project: date, cases_new, cases_unvax, cases_pvax, cases_fvax, cases_boost, and cases_active. These variables directly relate to the research question and keep the analysis simple. The date was converted to proper Date format, and missing values in vaccination subgroups were replaced with zeros to ensure consistent analysis.
+The original dataset has 31 columns, but for this project I selected only seven columns: date, cases_new, cases_unvax, cases_pvax, cases_fvax, cases_boost, and cases_active. These columns are directly connected to the research question and make the work easier and more focused. The date column was changed into the correct Date format, and missing values in the vaccination columns were replaced with zeros to keep the analysis consistent.
 
 ### 1.3 Research question (≈50 words)
 
-**RQ:** Is there a significant relationship between vaccination status (unvaccinated, partially vaccinated, fully vaccinated and booster groups) and the number of new COVID-19 cases in Malaysia?
+**RQ:** Is there a significant relationship between different vaccination groups (unvaccinated, partially vaccinated, fully vaccinated and booster) and the number of new COVID-19 cases in Malaysia?
 
-This question helps identify whether different vaccination-level case counts move together with total new daily cases.
+This question helps to understand if changes in vaccination-group cases match the changes in total daily new cases.
 
 ### 1.4 Null and alternative hypothesis (≈100 words)
 
 To answer the research question, Pearson correlation and a multiple linear regression model were used.
 
-**H0 (Null Hypothesis):** There is no significant relationship between vaccination-group case counts and the number of new COVID-19 cases.
+**H0 (Null Hypothesis):** There is no significant relationship between vaccination-group case numbers and new daily COVID-19 cases.
 
-**H1 (Alternative Hypothesis):** There is a significant relationship between vaccination-group case counts and the number of new COVID-19 cases.
+**H1 (Alternative Hypothesis):** There is a significant relationship between vaccination-group case numbers and new daily COVID-19 cases.
 
-If p < 0.05, H0 will be rejected. The hypotheses allow us to see whether new daily cases increase or decrease in connection with vaccination status.
+The hypothesis is tested by checking the p-value. If p < 0.05, we reject H0. This shows whether changes in new cases are related to the vaccination groups.
 
 ---
 
@@ -30,15 +30,15 @@ If p < 0.05, H0 will be rejected. The hypotheses allow us to see whether new dai
 
 ### 2.1 Research papers (≈200 words)
 
-Previous research has examined how vaccination affects COVID-19 transmission and case severity. Several studies reported that unvaccinated individuals had the highest risk of infection and contributed more strongly to case surges. Research also showed that partially and fully vaccinated groups had reduced infection risk, while booster doses offered stronger protection during later waves. Some Malaysian studies found changes in vaccine effectiveness over time, especially during the appearance of new variants.
+Many research papers have discussed how vaccination affects COVID-19 infection levels. Several studies found that unvaccinated people had the highest chance of getting infected and often made up a large part of new cases during major waves. Other studies showed that partially and fully vaccinated individuals had a lower risk of infection. Booster doses were also reported to provide extra protection, especially when new variants appeared.
 
-Although many papers discuss the overall benefits of vaccination, fewer studies directly analyse how different vaccination categories relate to daily new case numbers inside one dataset. Some papers focus mainly on hospitalisation or mortality rather than transmission-related daily patterns. Therefore, this project attempts to fill a small gap by directly analysing Malaysian daily data across vaccination groups.
+However, most papers look at vaccine effectiveness in general, and fewer studies examine daily case numbers for different vaccination groups inside one country. Some research focuses more on hospital admissions or deaths rather than daily infection patterns. Because of this, it is useful to look directly at Malaysia’s daily data and compare different vaccination categories.
 
-The findings from this dataset can be compared with previous research trends to see if similar outcomes appear, such as higher infection levels among unvaccinated individuals or reduced risk among fully vaccinated and booster groups.
+By studying these relationships in the dataset, we can see whether the patterns in Malaysia agree with earlier research findings. For example, we can check if unvaccinated cases rise together with daily new cases or if booster groups show lower case counts.
 
 ### 2.2 Why the RQ is of interest (≈100 words)
 
-The research question is useful because it allows us to explore whether daily changes in COVID-19 cases match changes in vaccination-group case counts. This adds insight into how vaccination progress affected case numbers in real time. Many reports explain the benefits of vaccination but do not present daily relationships within one dataset. Understanding these connections may help with future public health planning, especially during new outbreaks. By separating unvaccinated, partially vaccinated, fully vaccinated and booster groups, the analysis gives more detailed and meaningful comparisons.
+This research question is important because it helps to understand how vaccination status may be connected with daily case numbers. Many reports say vaccines reduce infection, but they do not always show the day-to-day relationship in one dataset. By separating the data into unvaccinated, partially vaccinated, fully vaccinated and booster groups, we can get a clearer picture. This type of analysis may also support future public health decisions, especially if similar outbreaks happen again.
 
 ---
 
@@ -46,15 +46,15 @@ The research question is useful because it allows us to explore whether daily ch
 
 ### 3.1 Appropriate graphs for the RQ (≈50 words)
 
-A histogram of daily new cases was used to show the distribution of cases over time. A scatter plot between unvaccinated cases and new cases was selected as the main visualisation because it directly tests the relationship for the research question. Time-series plots and a correlation heatmap were also included for additional understanding.
+A histogram of daily new cases shows how cases are spread over the whole period. A scatter plot of unvaccinated cases against new cases is used as the main graph because it directly relates to the research question. Time-series plots and a correlation heatmap were added to help understand the data better.
 
 ### 3.2 Additional information (≈50 words)
 
-The histogram shows that case numbers vary widely, with clear peaks that match major outbreak periods. The scatter plot indicates a positive trend between unvaccinated cases and new cases, supporting the statistical tests. Time-series plots show how each vaccination group changes over time.
+The histogram shows that case numbers rise and fall a lot, with clear peaks during major waves. The scatter plot shows an upward trend between unvaccinated cases and total new cases. Time-series graphs help show how vaccination groups changed over time.
 
 ### 3.3 Useful information (≈50 words)
 
-The visuals confirm that unvaccinated case counts tend to rise with new daily cases. The correlation heatmap also shows positive correlations for other vaccination groups. These patterns support further statistical testing.
+The visuals show that higher unvaccinated case numbers usually happen on days with more new cases. Other vaccination groups also show some level of connection. These early patterns make the dataset suitable for correlation and regression analysis.
 
 ---
 
@@ -62,11 +62,11 @@ The visuals confirm that unvaccinated case counts tend to rise with new daily ca
 
 ### 4.1 Statistical test used (≈75 words)
 
-Pearson correlation was used because all variables were continuous, and the goal was to measure linear relationships between new cases and vaccination-group counts. A multiple linear regression model was added to test how all vaccination variables together explain changes in new cases. These methods match the research question and satisfy the assignment’s statistical requirements.
+Pearson correlation was used because all variables were continuous, and the goal was to measure how strongly two variables move together. A multiple linear regression model was also included to test how all vaccination-group variables together influence new cases. These tests match the research question and follow the assignment requirement for using a continuous-data statistical test.
 
 ### 4.2 Hypothesis test result (≈100 words)
 
-The Pearson correlation between new cases and unvaccinated cases was statistically significant (p < 0.05), showing a positive relationship. Other vaccination groups also had meaningful correlations with new cases. The regression model confirmed that vaccination-group counts jointly help explain variations in total new cases. Because the p-values were below 0.05, the null hypothesis is rejected. This means the data supports the idea that vaccination status is related to how many new cases appear each day.
+The Pearson correlation between new cases and unvaccinated cases was positive and statistically significant (p < 0.05). This means the two variables tend to increase together. Other vaccination groups also showed meaningful correlations. The regression model results supported this by showing that the vaccination-group variables together help explain the changes in new cases. Since the p-values were below the 0.05 level, the null hypothesis is rejected. This means there is a significant relationship between vaccination status and new daily COVID-19 cases in Malaysia.
 
 ---
 
@@ -74,19 +74,19 @@ The Pearson correlation between new cases and unvaccinated cases was statistical
 
 ### 5.1 What went well (≈75 words)
 
-Our group worked well in selecting suitable variables and cleaning the dataset. Converting the date format, handling missing values and choosing the correct columns helped make the R analysis straightforward. Each member contributed ideas, and communication improved as the project progressed. The visualisations and statistical tests produced meaningful results.
+Our group worked well when preparing and cleaning the dataset. We were able to choose the correct columns and fix issues with the date format and missing values. Once the data was ready, the R analysis became easier to run. Everyone shared ideas, and communication improved across the project. The visualisations and statistical tests gave results that were clear and helpful.
 
 ### 5.2 Points for improvement (≈75 words)
 
-At first, we struggled with understanding which variables were most relevant to the research question. Some team members also found R functions confusing. Better early planning and dividing tasks sooner would improve our workflow next time. Learning more about statistical assumptions earlier in the project could also help improve confidence.
+At the start, we were unsure about which variables to use and which ones matched the research question. Some of us also struggled with R commands. In the future, we could plan earlier, practise using R sooner, and divide tasks in a clearer way. Learning more about the statistical methods at the beginning would also help us work more confidently.
 
 ### 5.3 Group's time management (≈50 words)
 
-The group managed time fairly well, although some tasks were completed closer to the deadline. Regular check-ins helped us stay organised, and progress improved once responsibilities were divided clearly.
+Our group managed time fairly well, although some parts were done closer to the deadline. After we divided tasks properly, progress became much faster. Regular discussions helped keep everyone on track.
 
 ### 5.4 Project’s overall judgement (≈50 words)
 
-Overall, the project was successful. We cleaned the data properly, created suitable visualisations, and used the correct statistical tests. The results clearly supported the research question.
+Overall, the project went smoothly. We cleaned the data, made suitable graphs, and used the correct statistical tests. The results supported the research question and showed clear relationships between the variables.
 
 ### 5.5 Changes to group (write only if needed)
 
@@ -94,7 +94,7 @@ Overall, the project was successful. We cleaned the data properly, created suita
 
 ### 5.6 Comment on GitHub log output (≈50 words)
 
-The GitHub log shows steady progress during the project. Major commits included cleaning the dataset, adding R scripts, and generating the visualisations. These commits represent key steps in the analysis workflow and show consistent group collaboration.
+The GitHub log shows a steady workflow. The main commits include cleaning the dataset, adding the R scripts, and generating the figures. These updates reflect key parts of the analysis and show that the group worked together throughout the project.
 
 ---
 
@@ -102,15 +102,15 @@ The GitHub log shows steady progress during the project. Major commits included 
 
 ### 6.1 Results explained (≈75 words)
 
-The analysis found a significant relationship between vaccination-group case counts and total new cases. Unvaccinated case numbers showed the strongest positive correlation with new cases. Other vaccination categories also displayed meaningful patterns. These results suggest that vaccination status influenced daily case levels during the pandemic in Malaysia.
+The results show a clear relationship between vaccination-group case numbers and total new COVID-19 cases. Unvaccinated cases had the strongest connection with new cases, while other vaccination groups also showed some level of relationship. These findings suggest that vaccination status affected how daily case numbers behaved during the pandemic.
 
 ### 6.2 Interpretation of the results (≈75 words)
 
-When unvaccinated case numbers increased, the total new cases increased strongly. This matches findings from previous research showing that unvaccinated groups have higher infection risk. Fully vaccinated and booster groups showed weaker but still noticeable relationships. Overall, the results support the idea that vaccination progress helped shape the behaviour of the pandemic.
+Days with more unvaccinated cases usually had higher total new cases. This agrees with previous studies that say unvaccinated people have a higher risk of infection. Fully vaccinated and booster groups showed weaker but noticeable patterns. Overall, the results suggest that vaccination helped reduce the spread, especially during large waves.
 
 ### 6.3 Limitations and future work (≈50 words)
 
-The dataset does not include factors such as variants, travel patterns, or testing rates, which may also affect case numbers. Future research could include additional variables or explore lag effects between groups to improve accuracy.
+The dataset does not include extra factors such as variants, movement restrictions, or testing frequency, which may influence case numbers. Future studies could add more variables or look at lag effects between groups for a deeper analysis.
 
 ---
 
@@ -132,54 +132,5 @@ World Health Organization (WHO), 2021. Guidance on conducting vaccine effectiven
 library(tidyverse)
 library(lubridate)
 library(ggpubr)
-library(corrplot)
-
-df <- read_csv("cases_malaysia_clean.csv", show_col_types = FALSE)
-df <- df %>% mutate(date = as.Date(date))
-
-# Select relevant columns
-cols <- c("date", "cases_new", "cases_unvax", "cases_pvax", "cases_fvax", "cases_boost", "cases_active")
-df <- df %>% select(all_of(cols))
-
-# Handle missing values
-df <- df %>% mutate(across(c(cases_unvax, cases_pvax, cases_fvax, cases_boost), ~replace_na(., 0)))
-df <- df %>% filter(!is.na(cases_new))
-
-# Histogram
-library(ggplot2)
-ggplot(df, aes(cases_new)) +
-  geom_histogram(bins = 50, aes(y = ..density..)) +
-  stat_function(fun = dnorm, args = list(mean = mean(df$cases_new), sd = sd(df$cases_new))) +
-  labs(title = "Histogram of daily new cases", x = "New cases", y = "Density")
-
-# Scatter plot for unvaccinated vs new cases
-cor.test(df$cases_new, df$cases_unvax)
-ggplot(df, aes(cases_unvax, cases_new)) +
-  geom_point(alpha = 0.4) +
-  geom_smooth(method = "lm", se = TRUE) +
-  labs(title = "New cases vs unvaccinated cases", x = "Unvaccinated", y = "New cases")
-
-# Time series plot
-ggplot(df, aes(date, cases_new)) +
-  geom_line() + labs(title = "Daily new cases over time")
-
-# Correlation heatmap
-nums <- df %>% select(-date)
-M <- cor(nums, use = "pairwise.complete.obs")
-corrplot(M, method = "number", type = "lower")
-
-# Regression model
-model <- lm(cases_new ~ cases_unvax + cases_pvax + cases_fvax + cases_boost, data = df)
-summary(model)
+library(cor
 ```
-
-### Appendix B: GitHub log output
-
-**Commit 1:** Initial project setup: added dataset and R Markdown structure.
-*This created the base structure and allowed others to run the project files.*
-
-**Commit 2:** Cleaned dataset: handled NA values, formatted date column.
-*This enabled correct plotting and consistent statistical testing.*
-
-**Commit 3:** Added analysis and visuals: histogram, scatter, time-series, and heatmap.
-*These outputs formed the core evidence for the report's results section.*
